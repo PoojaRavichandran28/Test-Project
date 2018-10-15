@@ -1,0 +1,20 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "This folder contains the library file required for all the folders present in New Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "cheerio": "^1.0.0-rc.2",
+    "elasticsearch": "^15.1.1",
+    "jsdom": "^12.2.0",
+    "mongodb": "^3.1.8",
+    "redis": "^2.8.0",
+    "request": "^2.88.0"
+  }
+}
