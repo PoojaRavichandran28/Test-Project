@@ -1,13 +1,15 @@
-const index = require('./library/index.js')
-//const MongoClient = require('mongodb').MongoClient
+const index = require('/home/deepan/project/library/index.js')
+const createCollection = require('/home/deepan/project/script/createCollection.js')
 const connectionUrl = 'mongodb://localhost:27017/?database='
 const dbName = 'UserDB'
-function connect(){
+function connectMongo(){
     const MongoClient = index.mongo()
-    MongoClient.connect(connectionUrl + dbName, {useNewUrlParser: true},function(err,db){
+    MongoClient.connect(connectionUrl + dbName, {useNewUrlParser: true},function(err,database){
         if(err) throw err
-        console.log('connected')
+        console.log('Connected to mongodb')
+        const db = database.db(dbName)
+        createCollection.createCollection(db)
     })
 }
 
-connect()
+connectMongo()

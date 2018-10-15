@@ -1,52 +1,49 @@
-/*function event(){
+module.exports.event = function(){
     const event = require('events')
+    return event
 }
 
-function fileSystem(){
+module.exports.fileSystem = function(){
     const fileSystem = require('fs')
+    return fileSystem
 }
 
-function http(){
+module.exports.http = function(){
     const http = require('http')
+    return http
 }
 
-function jsdom(){
+module.exports.jsdom = function(){
     const {JSDOM} = require('jsdom')
+    return {JSDOM}
 }
-*/
+
 module.exports.mongo = function(){
     const MongoClient = require('mongodb').MongoClient
     return MongoClient
 }
-/*
-function path(){
+
+module.exports.path = function(){
     const path = require('path')
+    return path
 }
 
-function process(){
+module.exports.proccess = function(){
     const process = require('process')
+    return process
 }
 
-function redis(){
+module.exports.redis = function(){
     const redis = require('redis')
+    return redis
 }
 
-function request(){
+module.exports.request = function(){
     const request = require('request')
+    return request
 }
 
-function url(){
+module.exports.url = function(){
     const url = require('url')
-}*/
-
-//module.exports(event)
-//module.exports(fileSystem)
-//module.exports(http)
-//module.exports(jsdom)
-//module.exports(path)
-//module.exports(process)
-//module.exports(redis)
-//module.exports(request)
-//module.exports(url)
-console.log(__filename)
-console.log(__dirname)
+    return url
+}
