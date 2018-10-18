@@ -1,3 +1,8 @@
-const connections = require('./connections')
-connections.mongo('UserDB').then(console.log('Connected to MongoDB'))
-connections.redis().then(console.log('Connected to Redis'))
+const Connection = require('./connections')
+const mongoDbUrl = 'mongodb://localhost:27017/?dbName='
+const mongoConnect = new Connection(mongoDbUrl)
+const redisConnect = new Connection()
+
+mongoConnect.mongo('myDB').then(console.log('Connected to MongoDB'))
+redisConnect.redis().then(console.log('Connected to Redis'))
+

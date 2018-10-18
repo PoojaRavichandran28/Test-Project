@@ -1,21 +1,20 @@
 const index = require('/home/deepan/project/library/index.js')
 
 const MongoClient = index.MongoClient
-const mongoDbUrl = 'mongodb://localhost:27017/?dbName='
 
 const RedisClient = index.redis.createClient()
 
 class Connection {
-    constructor(url) {
+   constructor(url) {
         this.url = url
-        this.db = undefined
+        // this.db = undefined
         return this
     }
 
-    static connect() {
+   /* static connect() {
         const connection = new Connection(mongoDbUrl)
         return connection
-    }
+    }*/
 
     mongo(dbName) {
         return new Promise((resolve,reject) => {
@@ -43,4 +42,4 @@ class Connection {
     }
 }
 
-module.exports = Connection.connect()
+module.exports = Connection
